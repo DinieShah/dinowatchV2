@@ -80,7 +80,7 @@ export function WatchExperience({
   return (
     <div className="animate-panel-in text-left">
       <div className="overflow-hidden rounded-[2px] border border-white/[0.12] backdrop-blur-[40px] bg-black/[0.25] ring-1 ring-inset ring-white/[0.08] shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-        {/* TWO-PASS FALLBACK IFRAME HANDLER — ZERO SANDBOX ATTRIBUTE FOR MEGAPLAY COMPATIBILITY */}
+        {/* Embedded Video Player */}
         {activeSource?.type === "iframe" || activeSource?.type === "iframe-adblock" ? (
           <iframe
             src={activeSource.url}
@@ -185,7 +185,7 @@ export function WatchExperience({
                   : "text-ink-muted hover:scale-[1.02] hover:text-ink hover:bg-white/[0.12]"
               }`}
             >
-              Server 1 (AniKoto)
+              Server 1 (Primary)
             </button>
             <button
               type="button"
@@ -196,7 +196,7 @@ export function WatchExperience({
                   : "text-ink-muted hover:scale-[1.02] hover:text-ink hover:bg-white/[0.12]"
               }`}
             >
-              Server 2 (Consumet)
+              Server 2 (Backup)
             </button>
           </div>
 

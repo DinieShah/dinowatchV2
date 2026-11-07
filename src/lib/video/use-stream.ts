@@ -9,9 +9,9 @@ interface StreamState {
   error: string | null;
 }
 
-// Client hook that loads the playback manifest for an episode from the internal
-// video service (via /api/stream/:id). Accepts optional `server` ("anikoto" | "consumet").
-// re-fetches when the anime/episode changes. When the service is unconfigured
+// Client hook that loads the playback manifest for an episode from the
+// video service (via /api/stream/:id). Accepts optional `server`.
+// Re-fetches when the anime/episode changes. When the service is unconfigured
 // the route returns { data: null } → the player shows its fallback state.
 //
 // Loading/reset is derived at render time from whether the last resolved fetch
