@@ -24,10 +24,10 @@
   --color-star: #fbbf24;
   --color-brand: #d97706;
 
-  /* 2+1 Typography */
-  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
-  --font-sans: var(--font-outfit), "Outfit", system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains), "JetBrains Mono", monospace;
+  /* Typography */
+  --font-display: var(--font-geist-sans), system-ui, sans-serif;
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 
   /* Fluid Easing */
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);

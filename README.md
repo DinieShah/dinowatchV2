@@ -2,17 +2,16 @@
 
 A fast, editorial anime discovery and streaming web application built with **Next.js 16 (Turbopack)**, **React 19**, and **Tailwind CSS v4**.
 
-Features a refined, bespoke design system with 2+1 typography (*Playfair Display*, *Outfit*, and *JetBrains Mono*), zero-elevation hairline borders, and deep frosted glass surfaces.
+Features a refined, bespoke design system with clean modern typography (*Geist* & *Geist Mono*), zero-elevation hairline borders, and deep frosted glass surfaces.
 
 ---
 
 ## Highlights
 
 - **Deep Frosted Glass UI**: Custom backdrop filter textures (`backdrop-blur-2xl`, inner specular highlights `ring-1 ring-inset ring-white/[0.12]`, and hairline borders).
-- **2+1 Typography Discipline**:
-  - *Playfair Display* for editorial serif headings
-  - *Outfit* for clean body prose
-  - *JetBrains Mono* for timestamps, badges, and metadata tags
+- **Clean Modern Typography**:
+  - *Geist* for clean, legible modern headings and body text
+  - *Geist Mono* for timestamps, badges, and metadata tags
 - **Responsive Media Player**: Custom video container supporting HLS.js streaming, subtitles, quality selectors, and keyboard navigation.
 - **Franchise Watch Order Rail**: Chronological franchise timeline (Prequels, Sequels, OVAs, Side Stories) directly underneath playback.
 - **Top 10 Trends**: Dynamic tabbed horizontal carousel (Day / Week / Month) with smooth edge fade and custom scroll rails.
