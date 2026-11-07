@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-paper: #09090b;
+  --color-paper-subtle: #141413;
+  --color-hairline: rgba(255, 255, 255, 0.12);
+  --color-hairline-strong: rgba(255, 255, 255, 0.22);
+
+  /* Legacy surface tokens */
+  --color-bg: #09090b;
+  --color-surface: rgba(0, 0, 0, 0.25);
+  --color-surface-2: rgba(255, 255, 255, 0.08);
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-line-strong: rgba(255, 255, 255, 0.22);
+
+  /* Text ramp */
+  --color-ink: #fafaf9;
+  --color-ink-muted: #a1a1aa;
+  --color-ink-faint: #71717a;
+
+  /* Accent & functional */
+  --color-accent: #d97706;
+  --color-star: #fbbf24;
+  --color-brand: #d97706;
+
+  /* 2+1 Typography */
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-outfit), "Outfit", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", monospace;
+
+  /* Fluid Easing */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+:root {
+  --paper: #09090b;
+  --paper-subtle: #141413;
+  --ink: #fafaf9;
+  --ink-muted: #a1a1aa;
+  --hairline: rgba(255, 255, 255, 0.12);
+  --accent: #d97706;
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+html {
+  color-scheme: dark;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+/*
+ * Quranify Soft Glass UI
+ * Base: 40px blur + obsidian/light tint
+ * Edge Depth: 1px solid rgba(255, 255, 255, 0.12)
+ * Inner Specular Highlight: inset 0 0 0 1px rgba(255, 255, 255, 0.08)
+ * Diffused Casting Shadow: 0 8px 32px rgba(0, 0, 0, 0.4)
+ */
+.glass,
+.soft-glass {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Gentle fade and slide mounting animation for panels & episode lists */
+@keyframes panelMountIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-panel-in {
+  animation: panelMountIn 0.55s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+/* Flat sharp HairlineMetaTag: 0px-2px radius, JetBrains Mono, tabular-nums */
+.hairline-tag {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+
+/* Hide scrollbars on horizontal rails while keeping scroll. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade the left/right edges of a horizontal scroller. */
+.edge-fade {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 24px,
+    #000 calc(100% - 24px),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 24px,
+    #000 calc(100% - 24px),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
